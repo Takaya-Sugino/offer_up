@@ -6,6 +6,9 @@ class User2Resource < ApplicationResource
 
   # Direct associations
 
+  has_many   :transactions,
+             foreign_key: :buyer_id
+
   # Indirect associations
 
 end

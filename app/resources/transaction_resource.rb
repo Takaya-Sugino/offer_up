@@ -7,6 +7,9 @@ class TransactionResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :buyer,
+             resource: User2Resource
+
   belongs_to :seller,
              resource: UserResource
 
