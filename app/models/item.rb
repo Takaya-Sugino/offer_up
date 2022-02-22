@@ -8,6 +8,10 @@ class Item < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :users,
+             :through => :comments,
+             :source => :user
+
   # Validations
 
   # Scopes

@@ -10,6 +10,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :items,
+             :through => :comments,
+             :source => :item
+
   # Validations
 
   # Scopes
