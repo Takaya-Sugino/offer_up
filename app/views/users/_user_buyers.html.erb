@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header d-flex align-items-center justify-content-between">
+    Buyers
+  </div>
+
+  <ul class="list-group list-group-flush">
+    <% @user.buyers.each do |user2| %>
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <!-- Show link start -->
+        <a href="/user2s/<%= user2.id %>">
+          <%= user2 %>
+        </a>
+        <!-- Show link end -->
+
+      </li>
+    <% end %>
+
+  </ul>
+</div>
