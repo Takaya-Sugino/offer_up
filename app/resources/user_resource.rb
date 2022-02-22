@@ -6,6 +6,8 @@ class UserResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :comments
+
   # Indirect associations
 
 end
