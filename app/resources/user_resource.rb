@@ -6,6 +6,9 @@ class UserResource < ApplicationResource
 
   # Direct associations
 
+  has_many   :transactions,
+             foreign_key: :seller_id
+
   has_many   :comments
 
   # Indirect associations
