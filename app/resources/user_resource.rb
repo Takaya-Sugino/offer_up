@@ -13,6 +13,9 @@ class UserResource < ApplicationResource
 
   # Indirect associations
 
+  many_to_many :buyers,
+               resource: User2Resource
+
   many_to_many :items
 
 end

@@ -11,4 +11,7 @@ class User2Resource < ApplicationResource
 
   # Indirect associations
 
+  many_to_many :sellers,
+               resource: UserResource
+
 end
