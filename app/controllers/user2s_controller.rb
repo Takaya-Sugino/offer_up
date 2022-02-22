@@ -3,7 +3,7 @@ class User2sController < ApplicationController
 
   # GET /user2s
   def index
-    @user2s = User2.all
+    @user2s = User2.page(params[:page]).per(10)
   end
 
   # GET /user2s/1
