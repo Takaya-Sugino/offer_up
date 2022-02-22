@@ -13,5 +13,4 @@ class User2Resource < ApplicationResource
 
   many_to_many :sellers,
                resource: UserResource
-
 end

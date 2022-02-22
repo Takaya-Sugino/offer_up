@@ -4,13 +4,13 @@ class Item < ApplicationRecord
   belongs_to :category
 
   has_many   :comments,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
   has_many   :users,
-             :through => :comments,
-             :source => :user
+             through: :comments,
+             source: :user
 
   # Validations
 
@@ -19,5 +19,4 @@ class Item < ApplicationRecord
   def to_s
     title
   end
-
 end

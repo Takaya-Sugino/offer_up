@@ -17,5 +17,4 @@ class UserResource < ApplicationResource
                resource: User2Resource
 
   many_to_many :items
-
 end

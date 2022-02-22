@@ -2,21 +2,21 @@ class User < ApplicationRecord
   # Direct associations
 
   has_many   :transactions,
-             :foreign_key => "seller_id",
-             :dependent => :destroy
+             foreign_key: "seller_id",
+             dependent: :destroy
 
   has_many   :comments,
-             :dependent => :destroy
+             dependent: :destroy
 
   # Indirect associations
 
   has_many   :buyers,
-             :through => :transactions,
-             :source => :buyer
+             through: :transactions,
+             source: :buyer
 
   has_many   :items,
-             :through => :comments,
-             :source => :item
+             through: :comments,
+             source: :item
 
   # Validations
 
@@ -25,5 +25,4 @@ class User < ApplicationRecord
   def to_s
     name
   end
-
 end

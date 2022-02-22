@@ -13,7 +13,7 @@ class Api::V1::User2sController < Api::V1::GraphitiController
     user2 = User2Resource.build(params)
 
     if user2.save
-      render jsonapi: user2, status: 201
+      render jsonapi: user2, status: :created
     else
       render jsonapi_errors: user2
     end
@@ -33,7 +33,7 @@ class Api::V1::User2sController < Api::V1::GraphitiController
     user2 = User2Resource.find(params)
 
     if user2.destroy
-      render jsonapi: { meta: {} }, status: 200
+      render jsonapi: { meta: {} }, status: :ok
     else
       render jsonapi_errors: user2
     end
