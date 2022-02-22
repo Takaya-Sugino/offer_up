@@ -12,6 +12,8 @@ RSpec.describe User, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_many(:buyers) }
+
     it { should have_many(:items) }
 
     end

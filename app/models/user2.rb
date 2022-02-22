@@ -7,6 +7,10 @@ class User2 < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :sellers,
+             :through => :transactions,
+             :source => :seller
+
   # Validations
 
   # Scopes
