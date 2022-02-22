@@ -10,6 +10,8 @@ class ItemResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :category
+
   has_many   :comments
 
   # Indirect associations
